@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 import pickle
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'), template_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates'))
 model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'HDI.pkl')
 model = pickle.load(open(model_path, 'rb'))
 
