@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-image: url("{{ url_for('static', filename='country.png') }}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<br><br><br>
+<h1 align="center" style="color:red; text-shadow: 2px 2px 4px #0000FF; font-family: 'Comic Sans MS';">Human Development Index</h1>
+<h3 align="center" style="color:white; font-family: 'Comic Sans MS';">A machine learning web app prediction</h3>
+<br><br>
+
+<center><h2 style="color:lightgreen; font-family: 'Comic Sans MS';">{{ prediction_text }}</h2></center>
+
+<br>
+<center><a href="/Prediction" style="color:lightblue; text-decoration: none; font-size: 18px;">Go Back</a></center>
+
+</body>
+</html>
